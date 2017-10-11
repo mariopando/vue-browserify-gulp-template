@@ -1,0 +1,34 @@
+# Default environment
+# NODE_ENV=testing
+# NODE_ENV=staging
+# NODE_ENV=production
+NODE_ENV=development
+
+# Port
+PORT=5000
+
+# Paths
+LOGIN_PATH=/auth
+SIGNUP_PATH=/signup
+SESSION_PATH=/sessions
+
+# Token vars
+TOKEN_NAME=token
+TOKEN_PREFIX=myApp
+TOKEN_HEADER=Authorization
+TOKEN_TYPE=Bearer
+STORAGE_TYPE=localStorage
+MASTER_KEY=ThisIsTheMasterKey
+JWT_SECRET=ThisIsTheJWTKey
+
+# Development variables
+DEVELOPMENT_API_URL=http://127.0.0.1:8081
+
+# Staging variables
+STAGING_API_URL=http://127.0.0.1:8082
+
+# Testing variables
+TESTING_API_URL=http://127.0.0.1:8083
+
+# Production variables
+PRODUCTION_API_URL=http://127.0.0.1:8084

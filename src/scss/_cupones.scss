@@ -1,0 +1,97 @@
+/** Cupones component rules ***/
+
+.cupones {
+  text-align: center;
+  .form {
+    height: 60rem;
+    label {
+      color: #2b3e50;
+    }
+  }
+  .controls {
+    button {
+      float: left;
+    }
+  }
+  button.header-button {
+    float: left;
+    margin-bottom: 2vh;
+  }
+  .el-popover {
+    text-align: center;
+    button {
+      display: block;
+      margin: auto;
+    }
+  }
+  
+  ul.user{
+    padding: 2px !important;
+  }
+
+  ul.user li{
+    list-style-type: none;
+  }
+
+  ul.user li.userImage{
+    padding: 5px 0;
+    text-align:center;
+  }
+  .cardAsignaCupon{
+    height:470px;
+    font-size:13px;
+    line-height:18px;
+    text-align: left;
+    padding-bottom:20px;
+  }
+  .cardAsignaCupon .botonPaso{
+    margin:5px auto;
+    display:table;
+  }
+  .selectFull{
+    width:100%;
+  }
+  .cardAsignaCupon h3{
+    margin:0 auto;
+    text-align: center;
+  }
+
+  .cardAsignaCupon .codigo{
+    font-size: 22px;
+    line-height: 30px;
+    color:#cc3300;
+  }
+
+  i.green{
+    color: green;
+  }
+  i.red{
+    color:red;
+  }
+  .derecha{
+    text-align: right;
+  }
+  .cursor{
+    cursor:pointer;
+  }
+  //.el-table {
+  //  @include rem(min-height, 300px);
+  //}
+  //.el-pagination {
+  //  @include rem(padding, 20px 10px);
+  //}
+  //
+  //.el-table {
+  //  @include rem(min-height, 300px);
+  //}
+  //.el-pagination {
+  //  @include rem(padding, 20px 10px);
+  //}
+  .el-table .info-row {
+    background: #ccc;
+  }
+
+  .el-table .positive-row {
+    background: #e2f0e4;
+  }
+}

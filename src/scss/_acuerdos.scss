@@ -1,0 +1,16 @@
+/** Acuerdos component rules ***/
+
+.acuerdos {
+  h3{
+    margin: 0 0 1rem 0;
+  }
+  .bold-text{
+    font-weight: bold;
+  }
+  .capitalize-text{
+    text-transform: capitalize;
+  }
+  .el-table .positive-row {
+    background: #e2f0e4;
+  }
+}

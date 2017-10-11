@@ -1,0 +1,12 @@
+.pagos-fallidos{
+  .ag-blue{
+    @include rem(min-height, 400px);
+    display: grid;
+  }
+  .el-tabs__content{
+      padding: 0
+  }
+  .el-button-group{
+    float: right;
+  }
+}

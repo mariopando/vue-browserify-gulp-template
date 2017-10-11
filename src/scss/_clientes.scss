@@ -1,0 +1,131 @@
+/** Clientes component rules ***/
+.clientes {
+  ul > li {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 10px;
+    @include rem(font-size, 1.5vh);
+  }
+
+  .el-button > span {
+    line-height: 0;
+  }
+
+  .detail,
+  .indicators,
+  .info-tabs {
+    margin-bottom: 3vh;
+  }
+
+  .box-card {
+    p {
+      line-height: 2.1vh;
+      font-size: 1.7vh;
+      margin: 1vh;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    button > span {
+      font-size: 1.5vh;
+    }
+
+    .to-right {
+      float: right;
+    }
+  }
+
+  .detail .box-card {
+    & > .el-card__header {
+      min-height: 10vh;
+      font-size: 2.4vh;
+      font-weight: 600;
+      line-height: 5vh;
+    }
+  }
+
+	.detail ul li{
+	  font-size: 18px;
+  	}
+
+	.detail ul li b{
+	  font-size: 14px;
+  	}
+  .indicators .box-card {
+    & > .el-card__header {
+      color: white;
+      text-transform: uppercase;
+      background-color: #210D38;
+      padding: 2vh;
+
+      i,
+      i:before {
+        padding: 1vh 0;
+      }
+
+      .digit,
+      .name {
+        text-align: right;
+      }
+
+      .digit {
+        font-size: 6vh;
+        line-height: 6vh;
+        padding-bottom: 1vh;
+      }
+
+      .name {
+        font-size: 2vh;
+        direction: rtl;
+      }
+    }
+
+    & > .el-card__body {
+      height:0;
+      padding:0;
+      /*padding: 1.5vh 2vh;*/
+
+      button {
+        text-align: left;
+      }
+
+      i,
+      i:before {
+        @include rem(padding, 3px 1px);
+        color: #5CB85C;
+        float: right;
+      }
+    }
+
+    .el-carousel__item {
+      background-color: #d3dce6;
+
+      .container {
+        @include rem(padding, 10px 20px);
+
+        h1 {
+          color: white !important;
+        }
+      }
+
+      &.is-active {
+        background-color: #99a9bf;
+
+        h1 {
+          font-size: 5vh !important;
+          font-weight: bolder;
+        }
+
+        .container {
+          @include rem(padding-top, 3px);
+        }
+      }
+    }
+  }
+
+  .el-tabs__header {
+    margin: 0;
+  }
+}

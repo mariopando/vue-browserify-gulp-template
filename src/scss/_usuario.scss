@@ -1,0 +1,44 @@
+/** Usuario component rules ***/
+
+.usuario{
+  width: 50vw;
+  @include rem(margin-top, 10px);
+  text-align: center;
+
+  .form {
+    height: 60rem;
+    label{
+      color: #2b3e50;
+    }
+  }
+  .controls{
+    button{
+      float: left;
+    }
+  }
+
+  button.header-button{
+    float: left;
+    margin-bottom: 2vh;
+  }
+
+  .el-popover{
+    text-align: center;
+    button{
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .el-table{
+    @include rem(min-height, 300px);
+  }
+
+  .el-pagination {
+    @include rem(padding, 20px 10px);
+  }
+
+  .submit_user_form{
+    margin: 2vh 0 4vh 0;
+  }
+}

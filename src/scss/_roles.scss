@@ -1,0 +1,41 @@
+/** Roles component rules ***/
+
+.roles {
+  @include rem(margin-top, 10px);
+  text-align: center;
+  .form {
+    label {
+      color: #2b3e50;
+    }
+  }
+  .controls {
+    button {
+      float: left;
+    }
+  }
+  button.header-button {
+    float: left;
+    margin-bottom: 2vh;
+  }
+  .el-popover {
+    text-align: center;
+    button {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .el-table {
+    @include rem(min-height, 300px);
+
+    //table scroll
+    .el-table__body-wrapper{
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: 60vh;
+    }
+  }
+  .el-pagination {
+    @include rem(padding, 20px 10px);
+  }
+}

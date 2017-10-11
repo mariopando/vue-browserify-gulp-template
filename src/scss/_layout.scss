@@ -1,0 +1,262 @@
+/*** Element UI Rules ***/
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    display: block;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+
+ul.el-menu .el-submenu {
+    min-height: 30px !important;
+}
+
+.navigation .side-menu ul.el-menu .el-submenu .el-submenu__title {
+    min-height: 30px !important;
+}
+/** Navigation component rules ***/
+.fa-bars {
+    color: #fff;
+}
+/*** General rules ***/
+div#app {
+    display: block;
+    position: relative;
+    //min-height: 100%;
+    //height: 100vh;
+    .side-right-menu {
+        right: 0;
+        top: 5vh;
+        position: absolute;
+        z-index: 100;
+        //overflow: hidden;
+        background-color: whitesmoke;
+        opacity: 1;
+        @include rem(padding, 20px);
+
+        .el-checkbox+.el-checkbox {
+            margin: 0;
+            clear: both;
+            display: block;
+        }
+
+        & > i.el-icon-close {
+            font-size: 20px;
+            position: absolute;
+            left: 1vw;
+            top: 2vh;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .el-table {
+            min-height: inherit;
+        }
+
+        form.el-form {
+            z-index: 100;
+            position: relative;
+
+            button.submit {
+                float: left;
+            }
+
+            & span.el-tag {
+                @include rem(margin-right, 10px);
+            }
+        }
+
+        div.background {
+            position: absolute;
+            z-index: 50;
+            height: 80vh;
+            width: 100vw;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    h1 {
+        @include rem(font-size, 30px);
+        @include rem(margin, 10px 0 10px 0);
+        text-align: left;
+        color: #b1b1b1;
+    }
+
+    h2 {
+        @include rem(font-size, 20px);
+        color: #bababa;
+    }
+    // All components rules [navigation discarding]
+    .abonados,
+    .acuerdos,
+    .administracion,
+    .boletas,
+    .bitacora,
+    .clientes-asignar-tags,
+    .clientes,
+    .comprar,
+    .conciliacion,
+    .cupones,
+    .finanzas,
+    .lista-blanca,
+    .login,
+    .pagos-fallidos,
+    .pagos,
+    .paypal-pendientes,
+    .productos,
+    .roles,
+    .rutas,
+    .tags,
+    .usuario,
+    .usuarios-baneados,
+    .usuarios-inactivos,
+    .usuarios-sos,
+    .usuarios{
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+.bg-purple-dark {
+    background: #99a9bf;
+}
+
+.bg-purple {
+    background: #d3dce6;
+}
+
+.bg-purple-light {
+    background: #e5e9f2;
+}
+
+
+/** ElementUI CSS Hacks **/
+.el-tabs {
+    a {
+        color: #38380D;
+        text-decoration: none;
+
+        &hover {
+            color: #552C84;
+            text-decoration: none;
+        }
+    }
+}
+
+.el-popover {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.float-right,
+.to-right {
+    float: right;
+}
+
+.titulo {
+    width: 30%;
+}
+
+.el-tabs--border-card > .el-tabs__header {
+    background-color: #210D38;
+    margin: 0;
+    color: #ffffff;
+}
+
+.el-tabs--border-card > .el-tabs__header {
+    color: #ffffff;
+}
+
+.el-table .cell {
+    word-break: break-word;
+}
+
+/*
+  .el-tabs__item {
+    padding: 0 16px;
+    height: 42px;
+    box-sizing: border-box;
+    line-height: 42px;
+    display: inline-block;
+    list-style: none;
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+}
+*/
+.el-button--primary {
+    color: #fff;
+    background-color: #210D38;
+    border-color: #552C84;
+}
+
+.el-button--primary:hover {
+    color: #fff;
+    background-color: #552C84;
+    border-color: #210D38;
+}
+/** Just for el-card childrens **/
+.el-card .el-card {
+    margin: 5vh 0;
+    padding: 4vh 0;
+}
+
+.el-card {
+    @include rem(margin, 10px 0);
+}
+
+.box-card > .el-card__header {
+    font-size: 2.4vh;
+    font-weight: 600;
+    line-height: 5vh;
+
+    h2 {
+        padding: 1vh 0;
+        margin: 0;
+        color: #1f2f3d !important;
+        text-align: left;
+    }
+}
+
+.el-menu-item,
+.el-submenu__title {
+    height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 20px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s,background-color 0.3s,color 0.3s;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+/** autocomplete select list **/
+.autocomplete-box{
+    li{
+        line-height: 26px;
+        div.value{
+            line-height: 10px;
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        span.name{
+            line-height: 1px;
+            font-size: 12px;
+            font-weight: bolder;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

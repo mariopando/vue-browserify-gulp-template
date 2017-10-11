@@ -1,0 +1,60 @@
+/**
+ * 	Webapp Sass Files Loader
+ */
+/* ---------------------------------------------------------------------------------------- */
+
+//charset
+@charset "utf-8";
+
+//Fonts
+@import "font-awesome";
+
+//Functions
+@import "mixins";
+
+//Sass Library
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon";
+
+//Variables
+//@import "element-variables"; // TODO: Implement a CSS4 precompiler for this file
+
+//Theme
+@import "../../node_modules/element-theme-default/lib/index"; // boostrap theme
+@import "theme/index"; // boostrap theme
+
+
+//Layout
+@import "../../node_modules/ag-grid/dist/styles/ag-grid";
+@import "../../node_modules/ag-grid/dist/styles/theme-fresh";
+@import "abonados"; // conciliacion layout
+@import "acuerdos"; // acuerdos layout
+@import "animations"; // animations
+@import "boletas"; // boletas layout
+@import "bitacora"; // bitacora layout
+@import "clientes"; // clientes layout
+@import "clientesasignartags"; // clientes layout
+@import "compras"; // compras layout
+@import "conciliacion"; // conciliacion layout
+@import "cupones"; // cupones layout
+@import "finanzas"; // finanzas layout
+@import "layout"; // main layout
+@import "listablanca"; // main layout
+@import "login"; // login layout
+@import "navigation"; // navigation layout
+@import "pagos"; // productos layout
+@import "pagosfallidos"; // productos layout
+@import "paypalpendientes"; // productos layout
+@import "productos"; // productos layout
+@import "roles"; // roles layout
+@import "rutas"; // rutas layout
+@import "tabla"; // finanzas layout
+@import "tags"; // tags layout
+@import "tooltips"; // finanzas layout
+@import "topbar"; // topbar layout
+@import "usuario"; // usuario layout
+@import "usuarios"; // usuarios layout
+@import "usuariosbaneados"; // usuarios baneados layout
+@import "usuariosinactivos"; // usuarios inactivos layout
+@import "usuariossos"; // usuarios sos layout
+@import "./ag-blue";

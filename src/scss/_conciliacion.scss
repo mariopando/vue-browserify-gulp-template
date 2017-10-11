@@ -1,0 +1,14 @@
+/** Conciliacion component rules ***/
+
+.conciliacion {
+  @include rem(margin-top, 10px);
+
+  .form {
+    height: 60rem;
+    label {
+      color: #2b3e50;
+    }
+  }  
+
+}
+

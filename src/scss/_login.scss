@@ -1,0 +1,57 @@
+$color-blanco: #fff;
+$color-morado-claro: #370f4c;
+$color-morado-oscuro: #210d38;
+$color-negro: #000000;
+$color-plomo: #cccccc;
+$color-sombra: #424242;
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin morado-degradado() {
+    background: $color-morado-claro;
+    background: -moz-linear-gradient(top, $color-morado-claro 0%, $color-morado-oscuro 100%);
+    background: -webkit-linear-gradient(top, $color-morado-claro 0%, $color-morado-oscuro 100%);
+    background: linear-gradient(to bottom, $color-morado-claro 0%, $color-morado-oscuro 100%);
+}
+
+body html {
+    background-color: $color-blanco !important;
+}
+
+.login-container {
+    .remember {
+        text-align: center;
+        padding: 2vh 0;
+        color: $color-blanco;
+        .el-checkbox__label {
+            color: $color-blanco;
+        }
+    }
+    .el-col {
+        @include box-shadow(0 0 .25em .25em $color-sombra);
+        @include morado-degradado();
+        border-radius: 4px;
+        h2 {
+            color: $color-blanco;
+        }
+    }
+    .grid-content {
+        border-radius: 4px;
+        min-height: 30vh;
+        min-width: 50vw;
+        padding: 5vh 5vw;
+        display: block;
+    }
+    .el-input {
+        margin: 2vh 0;
+    }
+    .el-button--primary {
+        background-color: $color-morado-claro;
+        border-color: $color-blanco;
+        color: $color-blanco;
+    }
+    height: 100vh;
+}
