@@ -21,21 +21,6 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     bourbon = require('node-bourbon').includePaths;
 
-// Check environments variables
-fs.stat('.env', function(err, stat) {
-    if (err == null) {
-        // There's no need to check if .env exists, dotenv will check this // for you. It will show a small warning which can be disabled when // using this in production.
-        dotenv.load(); //load vars to process.env
-    } else if (err.code == 'ENOENT') {
-        // file does not exist
-        fs.createReadStream('.sample-env').pipe(fs.createWriteStream('.env', { mode: 0o755 }));
-        // There's no need to check if .env exists, dotenv will check this // for you. It will show a small warning which can be disabled when // using this in production.
-        dotenv.load(); //load vars to process.env
-    } else {
-        console.log('Reading .env file error: ', err.code);
-    }
-});
-
 // Watchify args contains necessary cache options to achieve fast incremental bundles.
 // See watchify readme for details. Adding debug true for source-map generation.
 watchify.args.debug = true;
@@ -170,7 +155,26 @@ gulp.task('build', ['create-config','production-build-browserify','production-bu
 });
 
 /*** Environment settings ***/
-gulp.task('create-config', function(cb) {
+gulp.task('create-env-file', function(cb){
+	// Check environments variables
+	fs.stat('.env', function(err, stat) {
+	    if (err == null) {
+	        // There's no need to check if .env exists, dotenv will check this // for you. It will show a small warning which can be disabled when // using this in production.
+		dotenv.load(); //load vars to process.env
+		cb();
+	    } else if (err.code == 'ENOENT') {
+	        // file does not exist
+	        fs.createReadStream('.sample-env').pipe(fs.createWriteStream('.env', { mode: 0o755 }));
+	        // There's no need to check if .env exists, dotenv will check this // for you. It will show a small warning which can be disabled when // using this in production.
+	        dotenv.load(); //load vars to process.env
+		cb();
+	    } else {
+	        console.log('Reading .env file error: ', err.code);
+	    }
+	});
+});
+
+gulp.task('create-config', ['create-env-file'], function(cb) {
     function returnConfig( config ) {
         var _config = {
             environment: config.NODE_ENV,
